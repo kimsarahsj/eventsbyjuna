@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import styles from './index.module.css'
 import { Inter } from 'next/font/google'
-import Tile from '@/components/tiles'
-import customCard from '@/components/customCard'
+import CustomCard from '@/components/customCard'
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,12 +18,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={`bg-neutralOne grid grid-cols-1 lg:grid-cols-2 gap-8 px-12 py-4 justify-items-center`}>
+      <div className={`bg-neutralOne grid grid-cols-1 lg:grid-cols-2 gap-8 px-12 py-4 xl:px-[10%] justify-items-center`}>
           <div className={`order-last lg:order-first flex justify-center items-center`}>
-            <div className="w-[80%] xl:w-[40%]">
+            <div className="w-[80%] xl:w-[50%]">
               <div className={'text-neutralBrown font-catchymager text-6xl'} id='about'>Full Service Event Planning</div>
               <div className={`pt-8 font-cocogothic text-lg text-neutralBrown`}>At Events by Juna we strive to deliver an unforgettable event from planning, decor, and catering we can make your dream event come to life. We work on events big or small including, but not limited to, engagements, weddings, corporate events, birthdays, baby showers, and anniversaries in Seattle and surrounding areas. Reach out to us today to find out how we can help you host your next event.</div>
-              <div className={`pt-8 text-center`}><button className={'px-8 py-2 border border-neutralBrown rounded-full bg-transparent font-cocogothic text-neutralBrown text-xl'}>Services</button></div>
+              <div className={`pt-8 text-center`}><Link href='/services' className={'px-8 py-2 border border-neutralBrown rounded-full bg-transparent font-cocogothic text-neutralBrown text-xl'}>Contact Us</Link></div>
             </div>
           </div>
           <div className={``}> 
@@ -34,52 +34,66 @@ export default function Home() {
           </div>
       </div>
 
-      <div className={`bg-neutralTwo`}>
-        <div className={`p-8`}>
-          <div className={'text-neutralBrown font-catchymager text-6xl'}>A La Carte Event Services</div>
-            <div className={`grid grid-cols-3 grid-row-2 gap-4`}>
-              <div>
-                <Image src={`/images/services-flowers.jpg`} width={200} height={100}/>
-              </div>
-              <div>
-                <Image src={`/images/services-tabledecor.jpg`} width={200} height={100}/>
-              </div>
-              <div>
-                <Image src={`/images/services-backdrops.jpg`} width={200} height={100}/>
-              </div>
-              <div>Sample text here</div>
-              <div>Sample text here</div>
-              <div>Sample text here</div>
-            </div>
-          </div>  
+      <div className={`bg-neutralTwo py-4`}>
+       <div className={`text-neutralBrown text-center font-catchymager text-6xl py-8`}>
+          A La Carte Event Services
+       </div>
+
+        <div className={`grid grid-cols-1 gap-8 px-12 py-4 xl:px-[10%] xl:grid-cols-3 justify-items-center`}>
+          <CustomCard image={'\/images\/flower-arrangement.PNG'} cardName={`Flower Arrangements`} cardDescription={`floral creations | bouquets, centerpieces`} refLink={'/services/#flowers'}/>
+          <CustomCard image={'\/images\/coco_balloons.jpg'} cardName={`Balloon Decorations`} cardDescription={`backdrop designs | balloon arches, garlands`} refLink={'/services/#balloons'}/>
+          <CustomCard image={'\/images/gift-basket1.PNG'} cardName={`Gift Baskets`} cardDescription={`desserts & gifts | gift baskets, charcuterie boards`} refLink={'/services/#additional'}/>
+        </div>
+
       </div>
 
-      <div className={`bg-neutralOne grid grid-cols-1 lg:grid-cols-2 gap-8 px-12 py-4 justify-items-center`}>
-        <div className={`order-last lg:order-first flex justify-center items-center`}>
-          <div className="w-[80%] xl:w-[80%]">
-            <div className={'text-neutralBrown font-catchymager text-6xl'}>Catering & Delivery</div>
-            <div className={`pt-8 font-cocogothic text-lg text-neutralBrown`}>Our mission is to provide you with delicious food for your event. We strive to use the freshest ingredients and we make sure to provide as many options as we can for specific dietary needs. Let us cater your next event!</div>
-            <div className={`pt-8`}><button className={'px-4 border border-neutralBrown rounded-full bg-transparent font-cocogothic text-neutralBrown'}>Catering Options</button></div>
+      <div className={`bg-neutralOne`}>
+        <div className={`px-12 py-4 xl:px-[10%] mb-12 flex justify-center justify-items-center grid grid-cols-1 lg:grid-cols-2`}>
+          <div className="w-[80%] order-last lg:order-first xl:w-[50%]">
+              <div className={'text-neutralBrown font-catchymager text-6xl pt-4'}>Catering & Delivery</div>
+              <div className={`pt-8 font-cocogothic text-lg text-neutralBrown`}>Our mission is to provide you with delicious food for your event. We strive to use the freshest ingredients and we make sure to provide as many options as we can for specific dietary needs. Let us cater your next event!</div>
+              <div className={`pt-8 text-center`}><Link href='/services/#catering' className={'px-8 py-2 mb-8 border border-neutralBrown rounded-full bg-transparent font-cocogothic text-neutralBrown text-xl'}>Catering Options</Link></div>
           </div>
-          <div className={``}> 
-            <Image src={`/images/catering.jpg`} 
-            width={500} 
-            height={300}
-            />
-          </div>
+            <div className={`p-4`}> 
+              <Image src={`/images/catering.jpg`} 
+              width={500} 
+              height={300}
+              />
+              <div className={`border my-2 px-8 py-4 border-neutralBrown text-xs text-center font-cocogothic`}>
+                We use the freshest ingredients to provide you an exceptional dining experience.
+              </div>
+            </div>
         </div>
       </div>
 
-      <div className={`md:h-[700px] sm:h-[900px] bg-neutralOne`}>
-        <div className={`grid grid-cols-2 grid-row-2 gap-4`}>
-          <div>
-            <Image src={`/images/custom_cake.png`} width={250} height={400}/>
-          </div>
-          <div>
-            <Image src={`/images/hbd.jpg`} width={900} height={300}/>
-          </div>
-          <div>Sample text here</div>
-          <div>Sample text here</div>
+      <div className={`bg-neutralOne`}>
+        <div className={`px-12 py-12 xl:px-[19%] grid grid-cols-1 xl:grid-cols-3 gap-4 flex justify-center justify-items-center`}>
+                <div className={`w-[350px]`}>
+                  <div className={``}>
+                    <Image src={`/images/custom_cake.PNG`}
+                      width="0" 
+                      height="0"
+                      sizes="100vw"
+                      className="w-full h-auto"/>
+                    </div>
+                  <div className={`border border-neutralBrown my-4 px-8 py-4 text-xs text-center font-cocogothic`}>
+                    <p>Add a custom cake to your event!</p>
+                  </div>
+                </div>
+
+                <div className={`w-[350px] md:w-[400px] xl:w-[700px] col-span-2`}>
+                  <div className={``}>
+                    <Image src={`/images/hbd.jpg`}
+                      width="0" 
+                      height="0"
+                      sizes="100vw"
+                      className="w-full h-auto"/>
+                    </div>
+                  <div className={`border border-neutralBrown my-4 px-8 py-4 text-xs text-center font-cocogothic`}>
+                    <p>We can help you design any event from birthdays, engagements, baby showers, and weddings.</p>
+                  </div>
+                </div>
+
         </div>
       </div>
 
@@ -125,11 +139,12 @@ export default function Home() {
         <div className={`p-8`}>
           <div className={`font-catchymager text-3xl text-white`}>Events by Juna</div>
         </div>
-        <div className={`self-center w-[100%] xl:w-[65%]`}>
+        <div className={`pb-12 self-center w-[100%] xl:w-[65%]`}>
           <div className={`m-4 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-2`}>
               <div className={`box-border h-48 w-64 p-4 border border-white `}>
                 <div className={`text-white font-cocogothic text-sm text-center py-4`}>Contact Us</div>
-                <div className={`text-white text-xs py-4`}><i className="fa-regular fa-envelope"></i> <a href = "mailto: eventsbyjuna@gmail.com">eventsbyjuna@gmail.com</a></div>
+                <div className={`text-white text-xs py-2`}><i className="fa-regular fa-envelope"></i> <a href = "mailto: eventsbyjuna@gmail.com">eventsbyjuna@gmail.com</a></div>
+                <div className={`text-white text-xs pb-2`}><i class="fa-solid fa-location-dot"></i> Seattle, WA</div>
                 <div className={`text-white text-xs`}><i className="fa-solid fa-phone"></i> (206) 209 7628</div>
               </div>
 
@@ -148,10 +163,10 @@ export default function Home() {
                 <div className={`flex flex-col items-center w-[100%]`}>
                   <div className={`grid grid-cols-3 gap-4`}>
                   <span> <a href="#"><i className="fa-brands fa-facebook text-3xl text-white"></i></a> </span>
-                  <span> <a href="https://www.instagram.com/eventsbyjuna/"><i className="fa-brands fa-instagram text-3xl text-white"></i></a> </span>
-                  <span> <a href="https://www.tiktok.com/@eventsbyjuna?is_from_webapp=1&sender_device=pc"><i className="fa-brands fa-tiktok text-3xl text-white"></i></a> </span>
+                  <span> <a href="https://www.instagram.com/eventsbyjuna/" target="_blank"><i className="fa-brands fa-instagram text-3xl text-white"></i></a> </span>
+                  <span> <a href="https://www.tiktok.com/@eventsbyjuna?is_from_webapp=1&sender_device=pc" target="_blank"><i className="fa-brands fa-tiktok text-3xl text-white"></i></a> </span>
                   </div>
-                <div className={`pt-8`}><button className={'px-8 py-2 text-lg border border-white rounded-full bg-transparent font-cocogothic text-white text-sm'}>Tag us in your photos!</button></div>
+                <div className={`pt-8`}><a href="https://www.instagram.com/eventsbyjuna/" target="_blank" className={'px-8 py-2 text-lg border border-white rounded-full bg-transparent font-cocogothic text-white text-sm'}>Tag us in your photos!</a></div>
                 </div>
               </div>
           </div>
