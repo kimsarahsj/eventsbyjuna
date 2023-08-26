@@ -30,13 +30,13 @@ const ImageCarousel = ({ images }) => {
         onClick={goToPrevious}
         className="absolute left-0 top-1/2 transform -translate-y-1/2 px-8 h-full text-4xl text-white"
       >
-        <i class="fa-solid fa-chevron-left"></i>
+        <i className="fa-solid fa-chevron-left"></i>
       </button>
       <button
         onClick={goToNext}
         className="absolute right-0 top-1/2 transform -translate-y-1/2 px-8 h-full text-4xl text-white"
       >
-        <i class="fa-solid fa-chevron-right"></i>
+        <i className="fa-solid fa-chevron-right"></i>
       </button>
     </div>
   );

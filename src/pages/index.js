@@ -156,7 +156,7 @@ export default function Home() {
               <div className={`box-border h-48 w-64 p-4 border border-white `}>
                 <div className={`text-white font-cocogothic text-sm text-center py-4`}>Contact Us</div>
                 <div className={`text-white text-xs py-2`}><i className="fa-regular fa-envelope"></i> <a href = "mailto: eventsbyjuna@gmail.com">eventsbyjuna@gmail.com</a></div>
-                <div className={`text-white text-xs pb-2`}><i class="fa-solid fa-location-dot"></i> Seattle, WA</div>
+                <div className={`text-white text-xs pb-2`}><i className="fa-solid fa-location-dot"></i> Seattle, WA</div>
                 <div className={`text-white text-xs`}><i className="fa-solid fa-phone"></i> (206) 209 7628</div>
               </div>
 

@@ -14,7 +14,7 @@ const FloatingNavbar = () => {
         onClick={toggleMenu}
         className="bg-stone-500 text-white py-2 px-4 rounded-full shadow-lg"
       >
-        <i class="fa-solid fa-bars"></i>
+        <i className="fa-solid fa-bars"></i>
       </button>
       {isOpen && (
         <ul className="absolute top-12 right-0 bg-white w-48 p-4 rounded-lg shadow-lg text-neutralBrown font-cocogothic text-lg">
