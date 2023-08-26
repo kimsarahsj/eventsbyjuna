@@ -3,12 +3,24 @@ import styles from './index.module.css'
 import { Inter } from 'next/font/google'
 import CustomCard from '@/components/customCard'
 import Link from 'next/link';
+import ImageCarousel from '@/components/imageCarousel';
+
 
 const inter = Inter({ subsets: ['latin'] })
+
+const images = [
+  { src: '/images/coco_balloons.jpg' },
+  { src: '/images/gift-basket1.PNG' },
+  { src: '/images/gift-basket2.PNG' },
+  { src: '/images/custom_cake.PNG' },
+  { src: '/images/dreamy-cake.jpg' },
+  { src: '/images/centerpiece.PNG' },
+];
 
 export default function Home() {
   return (
     <main className={`flex flex-col`}>
+      
       <div className={`bg-[url('/images/hero.jpg')] bg-cover bg-no-repeat bg-center h-screen flex items-center`}>
         <div className={`w-full text-center`}>
         <div className={`font-cocogothic text-lg text-white uppercase `}>Welcome To</div>
@@ -23,7 +35,7 @@ export default function Home() {
             <div className="w-[80%] xl:w-[50%]">
               <div className={'text-neutralBrown font-catchymager text-6xl'} id='about'>Full Service Event Planning</div>
               <div className={`pt-8 font-cocogothic text-lg text-neutralBrown`}>At Events by Juna we strive to deliver an unforgettable event from planning, decor, and catering we can make your dream event come to life. We work on events big or small including, but not limited to, engagements, weddings, corporate events, birthdays, baby showers, and anniversaries in Seattle and surrounding areas. Reach out to us today to find out how we can help you host your next event.</div>
-              <div className={`pt-8 text-center`}><Link href='/services' className={'px-8 py-2 border border-neutralBrown rounded-full bg-transparent font-cocogothic text-neutralBrown text-xl'}>Contact Us</Link></div>
+              <div className={`pt-8 text-center`}><Link href='/services' className={'px-8 py-2 border border-neutralBrown rounded-full bg-transparent font-cocogothic text-neutralBrown text-xl'}>Services</Link></div>
             </div>
           </div>
           <div className={``}> 
@@ -67,7 +79,7 @@ export default function Home() {
       </div>
 
       <div className={`bg-neutralOne`}>
-        <div className={`px-12 py-12 xl:px-[19%] grid grid-cols-1 xl:grid-cols-3 gap-4 flex justify-center justify-items-center`}>
+        <div className={`px-8 py-12 2xl:px-[16%] grid grid-cols-1 2xl:grid-cols-3 gap-4 flex justify-center justify-items-center`}>
                 <div className={`w-[350px]`}>
                   <div className={``}>
                     <Image src={`/images/custom_cake.PNG`}
@@ -81,7 +93,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className={`w-[350px] md:w-[400px] xl:w-[700px] col-span-2`}>
+                <div className={`w-[350px] md:w-[400px] 2xl:w-[700px] 2xl:col-span-2`}>
                   <div className={``}>
                     <Image src={`/images/hbd.jpg`}
                       width="0" 
@@ -97,19 +109,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={`h-[600px] bg-neutralTwo`}>
-        <div className={`p-8`}>
-          <div className={'text-neutralBrown font-catchymager text-6xl'}>Explore the Possibilities</div>
-          <div className={`m-4 grid grid-cols-3`}>
-            <div>
-              <Image src={`/images/centerpiece.PNG`} width={200} height={100}/>
-            </div>
-            <div>
-              <Image src={`/images/gallery2.jpg`} width={200} height={100}/>
-            </div>
-            <div>
-              <Image src={`/images/gallery3.jpg`} width={200} height={100}/>
-            </div>
+      <div className={`bg-neutralTwo`}>
+        <div className={`py-12 flex flex-col justify-center items-center`}>
+          <div className={'text-neutralBrown font-catchymager text-6xl text-center'}>Explore the Possibilities</div>
+          <div className="m-12 w-[350px] sm:w-[450px] md:w-[600px] lg:w=[800px] xl:w-[1000px]">
+            <ImageCarousel images={images} />
           </div>
         </div>
       </div>

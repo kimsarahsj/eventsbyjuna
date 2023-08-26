@@ -3,7 +3,6 @@ import styles from './index.module.css'
 import { Inter } from 'next/font/google'
 import ServicesContent from '@/components/servicesContent'
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Services() {
