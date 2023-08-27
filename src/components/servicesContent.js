@@ -13,6 +13,7 @@ const servicesContent = ({image, title, description, sectionNav}) => {
         <Image src={`${image}`}
           width={500}
           height={900}
+          alt={title}
         />
       </div>
     </div>

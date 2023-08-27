@@ -3,7 +3,7 @@ import styles from './form.module.css'
 import { useState } from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
-export default function form() {
+export default function Form() {
 
     const [required, setRequired] = useState(false);
 

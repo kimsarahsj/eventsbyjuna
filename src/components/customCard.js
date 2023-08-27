@@ -9,7 +9,8 @@ const customCard = ({image, cardName, cardDescription, refLink}) => {
           width="0" 
           height="0"
           sizes="100vw"
-          className="w-full h-auto"/>
+          className="w-full h-auto"
+          alt={cardDescription}/>
         </div>
       <Link href={`${refLink}`}>
       <div className={`border border-neutralBrown my-4 px-8 py-4 text-xs text-center font-cocogothic hover:bg-stone-400`}>

@@ -50,6 +50,7 @@ export default function Home() {
             <Image src={`/images/wedding_flowers.png`}
               width={500}
               height={900}
+              alt=""
             />
           </div>
       </div>
@@ -78,6 +79,7 @@ export default function Home() {
               <Image src={`/images/catering.jpg`} 
               width={500} 
               height={300}
+              alt=""
               />
               <div className={`border my-2 px-8 py-4 border-neutralBrown text-xs text-center font-cocogothic`}>
                 We use the freshest ingredients to provide you an exceptional dining experience.
@@ -94,7 +96,8 @@ export default function Home() {
                       width="0" 
                       height="0"
                       sizes="100vw"
-                      className="w-full h-auto"/>
+                      className="w-full h-auto"
+                      alt=""/>
                     </div>
                   <div className={`border border-neutralBrown my-4 px-8 py-4 text-sm text-center font-cocogothic`}>
                     <p>Add a custom cake to your event!</p>
@@ -107,7 +110,8 @@ export default function Home() {
                       width="0" 
                       height="0"
                       sizes="100vw"
-                      className="w-full h-auto"/>
+                      className="w-full h-auto"
+                      alt=""/>
                     </div>
                   <div className={`border border-neutralBrown my-4 px-8 py-4 text-sm text-center font-cocogothic`}>
                     <p>We can help you design any event from birthdays, engagements, baby showers, and weddings.</p>
