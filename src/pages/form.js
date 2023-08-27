@@ -5,11 +5,17 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function form() {
 
+    const [required, setRequired] = useState(false);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData);
+
+        //Check Required Fields
+        if(data.name.length>3 && data.email.length>6 && data.moreinfo.length>10)
+        {
         const recipient = {
             name: data.name,
             email: data.email
@@ -97,8 +103,6 @@ export default function form() {
         `;
         const message = preMessage.replace(/\n/g,"");
 
-        console.log(JSON.stringify({ recipient: recipient, subject: subject, message: message }));
-
         const response = await fetch('/api/email', {
             method: 'POST',
             headers: {
@@ -106,39 +110,43 @@ export default function form() {
             },
             body: JSON.stringify({ recipient: recipient, subject: subject, message: message }),
           });
-    
-          const responseData = await response.text();
-    
-          if (response.ok) {
-            e.currentTarget.reset();
-            
-          } else {
-            //setResponseMessage(responseData.error || 'An error occurred while sending the email.');
-          }
 
           console.log(response);
-          console.log(responseData);
+    
+          if (response.ok) {
+            setSubmit(true);            
+          } else {
+            setSubmit(true);
+            setError(true);
+          }
+        } else {
+          setRequired(true);
+        }
 
-        } catch (error) {
-            console.log(error);
-            console.log(800)
+        } catch (err) {
+          console.log(err);
         }
     }
 
-  return (
-    <main className={`flex flex-col`}>
-        <div className={`bg-neutralOne bg-cover h-screen min-h-screen`}> 
+    const [submit, setSubmit] = useState(false);
+    const [error, setError] = useState(false);
+    
+    const getForm = () => {
+      return (
+        <div className={`flex flex-col`}>
+        <div className={`bg-neutralOne bg-cover pb-12`}> 
             <div className={'text-neutralBrown font-catchymager text-6xl p-12'} id='about'>Contact Us</div>
             <form className={'w-full bg-neutralOne'} onSubmit={handleSubmit}>
                 <div className={'px-12 py-4 xl:px-[10%] mb-12 flex grid grid-cols-1 md:grid-cols-2 gap-8 text-neutralBrown font-cocogothic text-base'}> 
                     <div className={`flex flex-col`}>
-                        <label>Name </label>
+                        <label>Name <span className="text-pink-600">*</span></label>
                         <input type='text' className='rounded-full h-6 font-sans px-4' id='name' name="name"></input>
                     </div>
                     <div className={`flex flex-col`}>
-                        <label>Event Date </label>
-                        <input type='text' className='rounded-full h-6 font-sans px-4' id='date' name="date"></input>
-                    </div>
+                        <label>Email Address <span className="text-pink-600">*</span></label>
+                        <input type='email' className='peer rounded-full h-6 font-sans px-4' id='email' name="email"></input>
+                        <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">Please provide a valid email address</p>
+                    </div>                    
                     <div className={`flex flex-col`}>
                         <label>Type of Event </label>
                             <select className='rounded-full px-4 h-6' id="event" name="event">
@@ -161,9 +169,8 @@ export default function form() {
                         <input type='text'className='rounded-full h-6 font-sans px-4' id='guests' name="guests"></input>
                     </div>
                     <div className={`flex flex-col`}>
-                        <label>Email Address </label>
-                        <input type='email' className='peer rounded-full h-6 font-sans px-4' id='email' name="email"></input>
-                        <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">Please provide a valid email address</p>
+                        <label>Event Date </label>
+                        <input type='text' className='rounded-full h-6 font-sans px-4' id='date' name="date"></input>
                     </div>
                     <div> Services of Interest
                         <div>
@@ -184,17 +191,49 @@ export default function form() {
                         </div>
                     </div>
                     <div className={`flex flex-col`}>
-                        <label htmlFor='moreinfo'>Additional Information </label>
+                        <label htmlFor='moreinfo'>Additional Information <span className="text-red-500">*</span></label>
                         <textarea type='text' id='moreinfo' name="moreinfo" rows='4' className='block w-full p-4 rounded-md font-sans'></textarea>
                     </div> 
                 </div>
-                <div className='flex  justify-center'>
+                <div className='flex flex-col justify-center'>
+                {required && 
+                  <p className="text-pink-600 text-center py-4">Please make sure you have added all required fields: Name, Email and Additional Info</p>
+                }
                 <input type='submit' className={'self-center px-8 py-2 border border-neutralBrown rounded-full bg-transparent font-cocogothic text-neutralBrown text-xl hover:bg-stone-400'}/>
                 </div>       
             </form>
-
         </div>
+    </div>
+      )
+    }
 
+    const getThanks = () => {
+      return (
+        <div className={`flex flex-col`}>
+        <div className={`flex flex-col bg-neutralOne bg-cover pb-12 text-center justify-center items-center h-screen`}> 
+            <div className={'text-neutralBrown font-catchymager text-6xl p-12'} id='about'>Thank you for contacting us.</div>
+            <div className={'text-neutralBrown font-catchymager text-4xl p-12'} id='about'>We will respond to you soon!</div>
+        </div>
+    </div>
+      );
+    }
+
+    const getError = () => {
+      return (
+        <div className={`flex flex-col`}>
+        <div className={`flex flex-col bg-neutralOne bg-cover pb-12 text-center justify-center items-center h-screen`}> 
+            <div className={'text-neutralBrown font-catchymager text-6xl p-12'} id='about'>Ooops looks like were having some issues.</div>
+            <div className={'text-neutralBrown font-catchymager text-4xl p-12'} id='about'>Please email us directly at contact@eventsbyjuna.com</div>
+        </div>
+    </div>
+      );
+    }
+
+  return (
+    <main>
+    {!submit && getForm()}
+    {submit && !error && getThanks()}
+    {submit && error && getError()}
     </main>
-
-  )}
+    )
+}

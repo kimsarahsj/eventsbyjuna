@@ -19,13 +19,13 @@ const FloatingNavbar = () => {
       {isOpen && (
         <ul className="absolute top-12 right-0 bg-white w-48 p-4 rounded-lg shadow-lg text-neutralBrown font-cocogothic text-lg">
           <li className="py-2">
-            <Link href="/" className="block">Home</Link>
+            <Link href="/" onClick={toggleMenu} className="block">Home</Link>
           </li>
           <li className="py-2">
-            <Link href="/services" className="block">Services</Link>
+            <Link href="/services" onClick={toggleMenu} className="block">Services</Link>
           </li>
           <li className="py-2">
-            <Link href="/form" className="block">Contact Us</Link>
+            <Link href="/form" onClick={toggleMenu} className="block">Contact Us</Link>
           </li>
         </ul>
       )}
