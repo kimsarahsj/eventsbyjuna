@@ -8,6 +8,8 @@ export default function Document() {
       <link rel="stylesheet" href="/fonts/amsterdamone/stylesheet.css" type="text/css" charSet="utf-8" />
       <link rel="stylesheet" href="/fonts/catchymager/stylesheet.css" type="text/css" charSet="utf-8" />
       <script src="https://kit.fontawesome.com/ebc8b6ff08.js" crossOrigin="anonymous"></script>
+      <title>Events by Juna and Catering</title>
+        <meta name="description" content="At Events by Juna we strive to deliver an unforgettable event from planning, decor, and catering. We organize events of all sizes in Seattle, Washington and the surrounding areas, including weddings, corporate events, birthday parties, holiday parties, and anniversaries."/>
       </Head>
       <body>
         <Main />
