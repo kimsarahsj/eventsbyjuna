@@ -42,7 +42,7 @@ export default function Home() {
           <div className={`order-last lg:order-first flex justify-center items-center`}>
             <div className="w-[80%] xl:w-[50%]">
               <div className={'text-neutralBrown font-catchymager text-6xl'} id='about'>Full Service Event Planning</div>
-              <div className={`pt-8 font-cocogothic text-lg text-neutralBrown`}>At Events by Juna we strive to deliver an unforgettable event from planning, decor, and catering we can make your dream event come to life. We work on events big or small including, but not limited to, engagements, weddings, corporate events, birthdays, baby showers, and anniversaries in Seattle and surrounding areas. Reach out to us today to find out how we can help you host your next event.</div>
+              <div className={`pt-8 font-cocogothic text-lg text-neutralBrown`}>At Events by Juna we strive to deliver an unforgettable event from planning and decor we can make your dream event come to life. We work on events big or small including, but not limited to, engagements, weddings, corporate events, birthdays, baby showers, and anniversaries in Seattle and surrounding areas. Reach out to us today to find out how we can help you host your next event.</div>
               <div className={`pt-8 text-center`}><Link href='/services' className={'px-8 py-2 border border-neutralBrown rounded-full bg-transparent font-cocogothic text-neutralBrown text-xl hover:bg-stone-400'}>Services</Link></div>
             </div>
           </div>
@@ -68,25 +68,7 @@ export default function Home() {
 
       </div>
 
-      <div className={`bg-neutralOne`}>
-        <div className={`px-12 py-4 xl:px-[10%] mb-12 flex justify-center justify-items-center grid grid-cols-1 lg:grid-cols-2`}>
-          <div className="w-[80%] order-last lg:order-first xl:w-[50%]">
-              <div className={'text-neutralBrown font-catchymager text-6xl pt-4'}>Catering & Delivery</div>
-              <div className={`pt-8 font-cocogothic text-lg text-neutralBrown`}>Our mission is to provide you with delicious food for your event. We strive to use the freshest ingredients and we make sure to provide as many options as we can for specific dietary needs. Let us cater your next event!</div>
-              <div className={`pt-8 text-center`}><Link href='/services/#catering' className={'px-8 py-2 mb-8 border border-neutralBrown rounded-full bg-transparent font-cocogothic text-neutralBrown text-xl hover:bg-stone-400'}>Catering Options</Link></div>
-          </div>
-            <div className={`p-4`}> 
-              <Image src={`/images/catering.jpg`} 
-              width={500} 
-              height={300}
-              alt=""
-              />
-              <div className={`border my-2 px-8 py-4 border-neutralBrown text-xs text-center font-cocogothic`}>
-                We use the freshest ingredients to provide you an exceptional dining experience.
-              </div>
-            </div>
-        </div>
-      </div>
+
 
       <div className={`bg-neutralOne`}>
         <div className={`px-8 py-12 2xl:px-[16%] grid grid-cols-1 2xl:grid-cols-3 gap-4 flex justify-center justify-items-center`}>
@@ -145,7 +127,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div><i className="fa-solid fa-quote-left text-white "></i></div>
-                  <div className={`font-cocogothic text-md text-white px-4 `}>I was impressed by the event designs and equally impressed by the delicious catering. If I ever have to plan another event again I know who to call.</div>
+                  <div className={`font-cocogothic text-md text-white px-4 `}>I was impressed by the event designs and equally impressed by Juna's professionalism. If I ever have to plan another event again I know who to call.</div>
               </div>
             </div>
         </div>

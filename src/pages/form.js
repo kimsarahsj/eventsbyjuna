@@ -57,10 +57,6 @@ export default function Form() {
             <td>${data.balloons?"YES":"NO"}</td>
           </tr>
           <tr>
-            <td>Catering</td>
-            <td>${data.catering?"YES":"NO"}</td>
-          </tr>
-          <tr>
             <td>Date</td>
             <td>${data.date}</td>
           </tr>
@@ -180,10 +176,6 @@ export default function Form() {
                         <div>
                             <input type="checkbox" id="balloons" name="balloons" value="Balloons" />
                             <label htmlFor="balloons"> Balloon Decorations</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="catering" name="catering" value="Catering"/>
-                            <label htmlFor="catering"> Catering</label>
                         </div>
                         <div>
                             <input type="checkbox" id="general" name="general" value="General"/>
