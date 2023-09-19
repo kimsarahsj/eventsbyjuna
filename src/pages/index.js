@@ -63,7 +63,7 @@ export default function Home() {
         <div className={`grid grid-cols-1 gap-8 px-12 py-4 xl:px-[10%] xl:grid-cols-3 justify-items-center`}>
           <CustomCard image={'\/images\/flower-arrangement.PNG'} cardName={`Flower Arrangements`} cardDescription={`floral creations | bouquets, centerpieces`} refLink={'/services/#flowers'}/>
           <CustomCard image={'\/images\/coco_balloons.jpg'} cardName={`Balloon Decorations`} cardDescription={`backdrop designs | balloon arches, garlands`} refLink={'/services/#balloons'}/>
-          <CustomCard image={'\/images/gift-basket1.PNG'} cardName={`Gift Baskets`} cardDescription={`desserts & gifts | gift baskets, charcuterie boards`} refLink={'/services/#additional'}/>
+          <CustomCard image={'\/images/gift-basket1.PNG'} cardName={`Gift Baskets`} cardDescription={`desserts & gifts | gift baskets, table decor`} refLink={'/services/#additional'}/>
         </div>
 
       </div>
