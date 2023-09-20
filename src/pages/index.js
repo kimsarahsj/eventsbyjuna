@@ -127,7 +127,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div><i className="fa-solid fa-quote-left text-white "></i></div>
-                  <div className={`font-cocogothic text-md text-white px-4 `}>I was impressed by the event designs and equally impressed by Juna's professionalism. If I ever have to plan another event again I know who to call.</div>
+                  <div className={`font-cocogothic text-md text-white px-4 `}>I was impressed by the event designs and equally impressed by Juna&aposs professionalism. If I ever have to plan another event again I know who to call.</div>
               </div>
             </div>
         </div>
