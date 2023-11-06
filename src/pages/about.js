@@ -26,7 +26,7 @@ With unwavering support from my beautiful family, my husband being my biggest he
 I take immense pride in ensuring that everything I create is handmade, unique, and meticulously curated with attention to the finest details.
 While my time for painting may be limited, I&apos;m grateful for the opportunity to pour my heart into every creation, making each moment unforgettable and magical.
 I&apos;m deeply thankful for my clients who trust me with their most important moments.
-I&pos;m here to spread creativity, joy, and love through my work, and I look forward to creating something extraordinary for you.
+I&apos;m here to spread creativity, joy, and love through my work, and I look forward to creating something extraordinary for you.
 Thank you for joining me on this journey of art, passion and celebration. 
 <div className='leading-8'>With love,</div>
 <div className='font-amsterdamone text-xl'>Juna</div>
