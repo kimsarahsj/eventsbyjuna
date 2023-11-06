@@ -9,7 +9,7 @@ const FloatingNavbar = () => {
   };
 
   return (
-    <div className="fixed top-4 right-4">
+    <div className="fixed top-4 right-4 z-50">
       <button
         onClick={toggleMenu}
         className="bg-stone-500 text-white py-2 px-4 rounded-full shadow-lg"
@@ -17,7 +17,7 @@ const FloatingNavbar = () => {
         <i className="fa-solid fa-bars"></i>
       </button>
       {isOpen && (
-        <ul className="absolute top-12 right-0 bg-white w-48 p-4 rounded-lg shadow-lg text-neutralBrown font-cocogothic text-lg">
+        <ul className="absolute top-12 right-0 bg-white w-48 p-4 rounded-lg shadow-lg text-neutralBrown font-cocogothic text-lg z-[100]">
           <li className="py-2">
             <Link href="/" onClick={toggleMenu} className="block">Home</Link>
           </li>
