@@ -9,12 +9,15 @@ import ImageCarousel from '@/components/imageCarousel';
 const inter = Inter({ subsets: ['latin'] })
 
 const images = [
+  
   { src: '/images/flower-arrangement.PNG' },
   { src: '/images/white-blue-flowers.PNG' },
   { src: '/images/red-pink-flower.PNG' },
   { src: '/images/sunflower.PNG' },
   { src: '/images/backdrop_cake.JPG' },
+  { src: '/images/safari_balloon.jpg'},
   { src: '/images/cake1.jpg' },
+  { src: '/images/berry_birthday.jpg'},
   { src: '/images/coco_balloons.jpg' },
   { src: '/images/gift-basket1.PNG' },
   { src: '/images/gift-basket2.PNG' },
@@ -32,9 +35,9 @@ export default function Home() {
       <div className={`bg-[url('/images/hero.jpg')] bg-cover bg-no-repeat bg-center h-screen flex items-center`}>
         <div className={`w-full text-center`}>
         <div className={`font-cocogothic text-lg text-white uppercase `}>Welcome To</div>
-        <div className={`font-amsterdamone text-6xl text-white pt-12`}>Events by</div>
-        <div className={`font-amsterdamone text-6xl text-white mt-2 pb-20`}>Juna</div>
-        <div className={`font-cocogothic text-sm text-white uppercase`}><a href="#about">Learn More</a></div>
+        <div className={`font-amsterdamone text-7xl text-white pt-12`}>Events by</div>
+        <div className={`font-amsterdamone text-7xl text-white mt-2 pb-20`}>Juna</div>
+        <div className={`font-cocogothic text-lg text-white uppercase`}><a href="#about">Learn More</a></div>
         </div>
       </div>
 
@@ -47,7 +50,7 @@ export default function Home() {
             </div>
           </div>
           <div className={``}> 
-            <Image src={`/images/wedding_flowers.png`}
+            <Image src={`/images/flower_arch.jpg`}
               width={500}
               height={900}
               alt=""
@@ -61,14 +64,30 @@ export default function Home() {
        </div>
 
         <div className={`grid grid-cols-1 gap-8 px-12 py-4 xl:px-[10%] xl:grid-cols-3 justify-items-center`}>
-          <CustomCard image={'\/images\/flower-arrangement.PNG'} cardName={`Flower Arrangements`} cardDescription={`floral creations | bouquets, centerpieces`} refLink={'/services/#flowers'}/>
-          <CustomCard image={'\/images\/coco_balloons.jpg'} cardName={`Balloon Decorations`} cardDescription={`backdrop designs | balloon arches, garlands`} refLink={'/services/#balloons'}/>
-          <CustomCard image={'\/images/gift-basket1.PNG'} cardName={`Gift Baskets`} cardDescription={`desserts & gifts | gift baskets, table decor`} refLink={'/services/#additional'}/>
+          <CustomCard image={'\/images\/flower_centerpiece_sq.jpg'} cardName={`Flower Arrangements`} cardDescription={`floral creations | bouquets, centerpieces`} refLink={'/services/#flowers'}/>
+          <CustomCard image={'\/images\/safari_balloon_sq.jpg'} cardName={`Balloon Decorations`} cardDescription={`backdrop designs | balloon arches, garlands`} refLink={'/services/#balloons'}/>
+          <CustomCard image={'\/images/basket.jpg'} cardName={`Gift Baskets`} cardDescription={`desserts & gifts | gift baskets, table decor`} refLink={'/services/#additional'}/>
         </div>
 
       </div>
 
-
+      <div className={`bg-neutralOne grid grid-cols-1 lg:grid-cols-2 gap-8 px-12 py-4 xl:px-[10%] justify-items-center`}>
+          <div className={`order-last lg:order-first flex justify-center items-center`}>
+            <div className="w-[80%] xl:w-[50%]">
+              <div className={'text-neutralBrown font-catchymager text-6xl'} id='about'>Rentals</div>
+              <div className={`pt-8 font-cocogothic text-lg text-neutralBrown`}>Discover Our Rental Services:
+ We offer a stunning selection of event backdrops, arches, sweet cart, cake table stands, peacock chair and more, for rent. Elevate your special occasions with our exquisite offerings.</div>
+              <div className={`pt-8 text-center`}><Link href='/services/#rentals' className={'px-8 py-2 border border-neutralBrown rounded-full bg-transparent font-cocogothic text-neutralBrown text-xl hover:bg-stone-400'}>Rental Options</Link></div>
+            </div>
+          </div>
+          <div className={``}> 
+            <Image src={`/images/wedding_flowers.png`}
+              width={500}
+              height={900}
+              alt=""
+            />
+          </div>
+      </div>
 
       <div className={`bg-neutralOne`}>
         <div className={`px-8 py-12 2xl:px-[16%] grid grid-cols-1 2xl:grid-cols-3 gap-4 flex justify-center justify-items-center`}>

@@ -26,7 +26,7 @@ const Footer = () => {
             <div className={`text-white font-cocogothic text-base text-center py-4`}>Get Social</div>
             <div className={`flex flex-col items-center w-[100%]`}>
               <div className={`grid grid-cols-3 gap-4`}>
-              <span> <a href="#"><i className="fa-brands fa-facebook text-3xl text-white"></i></a> </span>
+              <span> <a href="https://www.yelp.com/biz/events-by-juna-seattle-2"><i className="fa-brands fa-yelp text-3xl text-white"></i></a> </span>
               <span> <a href="https://www.instagram.com/eventsbyjuna/" target="_blank"><i className="fa-brands fa-instagram text-3xl text-white"></i></a> </span>
               <span> <a href="https://www.tiktok.com/@eventsbyjuna?is_from_webapp=1&sender_device=pc" target="_blank"><i className="fa-brands fa-tiktok text-3xl text-white"></i></a> </span>
               </div>

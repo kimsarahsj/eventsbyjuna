@@ -25,6 +25,9 @@ const FloatingNavbar = () => {
             <Link href="/services" onClick={toggleMenu} className="block">Services</Link>
           </li>
           <li className="py-2">
+            <Link href="/about" onClick={toggleMenu} className="block">About</Link>
+          </li>
+          <li className="py-2">
             <Link href="/form" onClick={toggleMenu} className="block">Contact Us</Link>
           </li>
         </ul>

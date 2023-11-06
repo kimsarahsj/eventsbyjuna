@@ -178,6 +178,10 @@ export default function Form() {
                             <label htmlFor="balloons"> Balloon Decorations</label>
                         </div>
                         <div>
+                            <input type="checkbox" id="rentals" name="rentals" value="Rentals"/>
+                            <label htmlFor="rentals"> Rental Options</label>
+                        </div>
+                        <div>
                             <input type="checkbox" id="general" name="general" value="General"/>
                             <label htmlFor="general"> General Inquiry</label>
                         </div>
