@@ -24,9 +24,9 @@ Over the years, I worked in the floral business, specializing in everything from
 But my passion for creativity and the desire to create moments worth celebrating led me to embark on my own journey.
 With unwavering support from my beautiful family, my husband being my biggest helper, I decided to start my own business, Events by Juna. 
 I take immense pride in ensuring that everything I create is handmade, unique, and meticulously curated with attention to the finest details.
-While my time for painting may be limited, I'm grateful for the opportunity to pour my heart into every creation, making each moment unforgettable and magical.
-I'm deeply thankful for my clients who trust me with their most important moments.
-I'm here to spread creativity, joy, and love through my work, and I look forward to creating something extraordinary for you.
+While my time for painting may be limited, I&apos;m grateful for the opportunity to pour my heart into every creation, making each moment unforgettable and magical.
+I&apos;m deeply thankful for my clients who trust me with their most important moments.
+I&pos;m here to spread creativity, joy, and love through my work, and I look forward to creating something extraordinary for you.
 Thank you for joining me on this journey of art, passion and celebration. 
 <div className='leading-8'>With love,</div>
 <div className='font-amsterdamone text-xl'>Juna</div>
